@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="main.css">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="app.js"></script>
+
+</head>
+<body>
+<div>Please submit your favorite artist
+	<form class="artistSubmit" onsubmit="return false;">
+				<input id="inputform" type="text" placeholder="e.g., Radiohead" name="artistName" size="30"  required>
+				<input type="submit" value="Submit">
+	</form>
+</div>
+
+<div class="firstrow">
+	<div class="pictures">
+		<img class="pics"/>
+	</div>
+	<div class="artist-name">Jimi Hendrix</div>
+</div>
+
+<!-- <div class="leftBottom">
+	<div class="genre"></div>
+	<div class="officialsite">
+		<a href="" target="_blank"></a>
+	</div>
+	<div class="similarArtists"></div>
+</div> -->
+
+<div class="leftBottom">
+	<div class="genre"></div>
+	<div class="officialsite">
+		<a href="" target="_blank"></a>
+	</div>
+	<div class="newsContainer">
+		<div class="news title"></div>
+		<div class="news summary"></div>
+		<div class="news url"></div>
+	</div>
+</div>
+
+<div class="rightBottom">
+	<div class="bio"></div>
+</div>
+
+<div class="similarArtists"> Similar Artists
+	<div class="similarArtistspic"><p class="simiName"></p><img class="simipics"/></div>
+</div>
+	
+
+
+
+
+<div class="templates hidden">
+	<div class="result"></div>
+</div>
+
+</body>
+</html>
