@@ -9,10 +9,10 @@
 
 </head>
 <body>
-<div>Please submit your favorite artist
+<div class="top">Please submit your favorite artist
 	<form class="artistSubmit" onsubmit="return false;">
 				<input id="inputform" type="text" placeholder="e.g., Radiohead" name="artistName" size="30"  required>
-				<input type="submit" value="Submit">
+				<input id="submit" type="submit" value="Submit">
 	</form>
 </div>
 
@@ -39,18 +39,28 @@
 	<div class="newsContainer">
 		<div class="news title"></div>
 		<div class="news summary"></div>
-		<div class="news url"></div>
+		<div class="news url"><a href="" target="_blank"></a></div>
 	</div>
+	<div class="whosampled"><a href="" target="_blank"><img class ="whosampled_logo" src="images/whosampled_logo.png"/></a></div>
 </div>
 
 <div class="rightBottom">
 	<div class="bio"></div>
+	<div class="similarArtists"> 
+	<p class="simititle">Similar Artists<br></p>
+	<div class="similarArtistspic pic1"><p class="simiNames simiName1"></p><img class="simipics simipic1"/></div>
+	<div class="similarArtistspic pic2"><p class="simiNames simiName2"></p><img class="simipics simipic2"/></div>
+	<div class="similarArtistspic pic3"><p class="simiNames simiName3"></p><img class="simipics simipic3"/></div>
+	<div class="similarArtistspic pic4"><p class="simiNames simiName4"></p><img class="simipics simipic4"/></div>
+	<div class="similarArtistspic pic5"><p class="simiNames simiName5"></p><img class="simipics simipic5"/></div>
+</div>
 </div>
 
-<div class="similarArtists"> Similar Artists
-	<div class="similarArtistspic"><p class="simiName"></p><img class="simipics"/></div>
-</div>
-	
+<!-- <div class="midfooter"></div> -->
+
+
+
+
 
 
 
@@ -58,6 +68,6 @@
 <div class="templates hidden">
 	<div class="result"></div>
 </div>
-
+<footer><a href="http://the.echonest.com/" target="_blank"><img class="logo" src="images/logo.png"/ ></a></footer>
 </body>
 </html>

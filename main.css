@@ -49,9 +49,9 @@ table {
 }
 
 
-* { 
+/** { 
   outline: 1px solid black;
-}
+}*/
 
 
 /*html { 
@@ -61,6 +61,42 @@ table {
   -o-background-size: cover;
   background-size: cover;
 }*/
+.top{
+	font-family: arial;
+	font-size: 15px;
+  	width: 100%;
+  	margin-left:auto;
+ 	margin-right:auto;
+ 	text-align: center;
+ 	font-weight: bold;
+ 	margin-top:15px;
+}
+
+#inputform{
+  border: 2px solid #000047;
+  border-radius: 5px;
+  font: 15px Arial, sans-serif;
+  overflow: hidden;
+  margin-left:auto;
+ margin-right:auto;
+  width: 50%;
+  margin-top:10px;
+  background-color:white;
+  color:#000047;
+}
+#submit{
+  font-family:Arial, sans-serif;
+  padding:5px;
+  background-color: gray;
+  border: 2px solid white;
+  color:white;
+  text-decoration:none;
+  font-size: 15px;
+  border-radius: 5px;
+}
+#submit:hover { 
+    background-color:#B80000;
+}
 .firstrow{
 	height:250px;
 	width:100%;
@@ -75,14 +111,13 @@ table {
 	position: relative;
 }
 .pics {
-	top:0;
-	bottom:0;
+	/*top:0;
+	bottom:0;*/
 	margin:auto;
 /*    height: 100%;*/
-    max-height: 100%;
-    max-width:100%; 
+	max-height: 100%;
+    width:100%; 
     display:block;
-/*    position: absolute;*/
 }
 /*.pictures img.tall {
 	left:0;
@@ -91,8 +126,8 @@ table {
     width: 100%;
     max-width: 100%;
 }​*/
-
-/*.pics{
+/*
+.pics{
 	zoom: 2;  //increase if you have very small images
 
     display: block;
@@ -100,7 +135,7 @@ table {
 
     height: auto;
     max-height: 100%;
-
+/*
     width: auto;
     max-width: 100%;
 }*/
@@ -130,24 +165,39 @@ table {
 	color:white;
 	font-family: Arial;
 	padding: 15px;
-	height:300px;
+	height:100%;
+	min-height: 500px;
 	/*margin-top: -330px;*/
 }
 
 
 .rightBottom{
 	margin-left: 250px;
-	padding: 15px;
-	font-family: Arial;
-	height:300px;
-	overflow:auto;
 	margin-top: -330px;
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 0px;
+	font-family: Arial;
+	height: 300px;
+	overflow:auto;
 }
+/*.midfooter{
+	height:15px;
+	width:100%;
+	position:absolute;
+	margin-left: 250px;
+	margin-top: -15px;
+	color: red;
+*/
+
 
 .newsContainer{
-	height:200px;
-	margin-top: 30px;
+	height:230px;
+	margin-top:15px;
+	max-width: 100%;
 	overflow:auto;
+	word-wrap: break-word;
 }
 .news{
 	font-family: arial;
@@ -162,9 +212,26 @@ span{
 	font-weight: bold;
 	color:gray;
 }
+.whosampled_logo{
+	height:60px;
+
+}
 
 .similarArtists{
-	height:200px;
+	height:250px;
+	min-width:980px;
+	margin-top:15px;
+	/*margin-left: 250px;*/
+	padding:15px;
+	text-align: center;
+}
+
+.simititle{
+	color:#B80000;
+	font-family: arial;
+	font-size: 25px;
+	text-align: center;
+	font-weight: bold;
 }
 .similarArtistspic{
 	width: 150px;
@@ -172,7 +239,32 @@ span{
 	background-color: gray;
 	position: relative;
 	margin-top: 10px;
+	display:inline-block;
+	overflow: hidden;
+	padding:10px;
+	padding-bottom:15px;
+	margin-right: 10px;
 }
+
+.similarArtistspic:hover{
+	background-color: #B80000;
+}
+
+.simiNames{
+	height:20px;
+	color:white;
+	font-family: arial;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 130px; 
+    text-overflow: ellipsis;
+}
+
 .simipics {
 	top:0;
 	bottom:0;
@@ -180,6 +272,17 @@ span{
 /*    height: 100%;*/
     max-height: 100%;
     max-width:100%; 
-    display:block;
+    
 /*    position: absolute;*/
+}
+
+footer{
+	height:50px;
+
+	bottom:0%;
+	width:100%;
+}
+
+.logo{
+	float:right;
 }
