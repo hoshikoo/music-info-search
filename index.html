@@ -2,72 +2,131 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
 	<title>Document</title>
+
 	<link rel="stylesheet" href="main.css">
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="app.js"></script>
+	<!-- include the jquery ui library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 
+	<script src="app.js"></script>
+	<link rel="stylesheet" href="flexslider.css" type="text/css">
+	<script src="jquery.flexslider.js"></script>
+	<script src="js/to-title-case.js"></script>
+	<script src="js/jquery.highlight-4.js"></script>
+     
+    
 </head>
+
+
 <body>
-<div class="top">Please submit your favorite artist
+<div class="top">Get the information about your favorite artist
 	<form class="artistSubmit" onsubmit="return false;">
-				<input id="inputform" type="text" placeholder="e.g., Radiohead" name="artistName" size="30"  required>
-				<input id="submit" type="submit" value="Submit">
+		<input id="inputform" type="text" placeholder="e.g., Radiohead" name="artistName" size="30" required >
+		<input id="submit" type="submit" value="Get Info">
 	</form>
 </div>
 
 <div class="firstrow">
-	<div class="pictures">
-		<img class="pics"/>
+	<div class="pictures flexslider">
+		  <ul class="slides">
+		    <li class="slide" data-thumb=>
+		      <img class="pics" src=""/>
+		    </li>
+		    <li class="slide" data-thumb=>
+		      <img class="pics" src=""/>
+		    </li>
+		    <li class="slide" data-thumb=>
+		      <img class="pics" src=""/>
+		    </li>
+		    <li class="slide" data-thumb=>
+		      <img class="pics" src=""/>
+		    </li>
+		    <li class="slide" data-thumb=>
+		      <img class="pics" src=""/>
+		    </li>
+		  </ul>
 	</div>
-	<div class="artist-name">Jimi Hendrix</div>
+	<div class="artist-name"></div>
 </div>
 
-<!-- <div class="leftBottom">
-	<div class="genre"></div>
-	<div class="officialsite">
-		<a href="" target="_blank"></a>
+
+<div class="secondrow">
+	<div class="leftBottom">
+		<div class="genre"></div>
+		<div class="officialsite">
+			<a href="" target="_blank"></a>
+		</div>
+
+
+<!-- Music Player -->
+		<div class="top5ongs"> Top 5 Songs	    
+		</div>		
+<!-- Music Player -->
+
+		<div class="whosampled">
+			Click below logo to check who sampled this artist's works<br>
+			<a class = "whosampleda" href="" target="_blank">
+				<img class ="whosampled_logo" src="images/whosampled_logo.png"/>
+			</a>
+		</div>
+		
+	</div>	
+
+
+	<div class="rightBottom">
+		<div class="bio"></div>
+
+		<div class="similarArtists"> 
+			<p class="simititle">Similar Artists<br></p>
+			<p class="simimemo">Click on the picture to search the similar artist<br></p>
+			<div class="simi flexslider">
+				<ul class="slides similarArtistsul">
+				    <li>
+						<div class="similarArtistspic"><p class="simiNames"></p><img class="simipics simipics1"/></div>
+					</li>
+					<li>
+						<div class="similarArtistspic"><p class="simiNames"></p><img class="simipics simipics2"/></div>
+					</li>
+					<li>	
+						<div class="similarArtistspic"><p class="simiNames"></p><img class="simipics simipics3"/></div>
+					</li>
+					<li>
+						<div class="similarArtistspic"><p class="simiNames"></p><img class="simipics simipics4"/></div>
+					</li>
+					<li>	
+						<div class="similarArtistspic"><p class="simiNames"></p><img class="simipics simipics5"/></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="newsContainer">
+			<div class="news title"></div>
+			<div class="news summary"></div>
+			<div class="news url"><a href="" target="_blank"></a></div>
+		</div>
+
 	</div>
-	<div class="similarArtists"></div>
-</div> -->
 
-<div class="leftBottom">
-	<div class="genre"></div>
-	<div class="officialsite">
-		<a href="" target="_blank"></a>
-	</div>
-	<div class="newsContainer">
-		<div class="news title"></div>
-		<div class="news summary"></div>
-		<div class="news url"><a href="" target="_blank"></a></div>
-	</div>
-	<div class="whosampled"><a href="" target="_blank"><img class ="whosampled_logo" src="images/whosampled_logo.png"/></a></div>
 </div>
 
-<div class="rightBottom">
-	<div class="bio"></div>
-	<div class="similarArtists"> 
-	<p class="simititle">Similar Artists<br></p>
-	<div class="similarArtistspic pic1"><p class="simiNames simiName1"></p><img class="simipics simipic1"/></div>
-	<div class="similarArtistspic pic2"><p class="simiNames simiName2"></p><img class="simipics simipic2"/></div>
-	<div class="similarArtistspic pic3"><p class="simiNames simiName3"></p><img class="simipics simipic3"/></div>
-	<div class="similarArtistspic pic4"><p class="simiNames simiName4"></p><img class="simipics simipic4"/></div>
-	<div class="similarArtistspic pic5"><p class="simiNames simiName5"></p><img class="simipics simipic5"/></div>
+
+<footer>
+	<a href="http://the.echonest.com/" target="_blank">
+		<img class="logo" src="images/logo2.png"/ >
+	</a>
+</footer>
+
+<div id="basicModal">
+	"The artist name you input is not available in the system.  Please try again or try another artist."
+	<img id="alert" src="images/background2.jpg">
+ </div>
+
+<div class = "hidden">
+			<p class="error">Something went wrong with your request. Here's what we know:</p>
 </div>
-</div>
-
-<!-- <div class="midfooter"></div> -->
-
-
-
-
-
-
-
-
-<div class="templates hidden">
-	<div class="result"></div>
-</div>
-<footer><a href="http://the.echonest.com/" target="_blank"><img class="logo" src="images/logo.png"/ ></a></footer>
 </body>
 </html>
