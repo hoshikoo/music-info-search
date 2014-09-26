@@ -169,14 +169,23 @@ var getResult = function(artistNameTag){
 		$(".officialsite a").removeAttr("href");
 		$(".officialsite a").html('');
 		var responseData = data.response;
-		// var officiallinkcheck = $.inArray("official_url", responseData["urls"]);
-		// console.log(responseData["urls"]);
-		// console.log(officiallinkcheck);
-		// if(officiallinkcheck === -1){
-		// 	$(".officialsite a").text("Sorry No Official Website is available");
-		// }else{
+		var responseurl= responseData["urls"];
+		console.log(responseurl);
+		if(responseurl.hasOwnProperty("official_url")){
 			$(".officialsite a").attr("href", responseData["urls"]["official_url"]); 
 			$(".officialsite a").text(responseData["urls"]["official_url"]); 		
+		}else if(responseurl.hasOwnProperty("wikipedia_url")){
+			$(".officialsite a").attr("href", responseData["urls"]["wikipedia_url"]); 
+			$(".officialsite a").text(responseData["urls"]["wikipedia_url"]); 	
+		}else if(responseurl.hasOwnProperty("lastfm_url")){
+			$(".officialsite a").attr("href", responseData["urls"]["lastfm_url"]); 
+			$(".officialsite a").text(responseData["urls"]["lastfm_url"]); 	
+		}else if(responseurl.hasOwnProperty("mb_url")){
+			$(".officialsite a").attr("href", responseData["urls"]["mb_url"]); 
+			$(".officialsite a").text(responseData["urls"]["mb_url"]); 		
+		}else{
+			$(".officialsite a").text("No website link is found for this artist");
+		};
 	}).fail(function(jqXHR, error, errorThrown){
 		var errorElem = showError(error);
 		$('.officialsite a').append(errorElem);	
@@ -204,104 +213,29 @@ var getResult = function(artistNameTag){
 		$(".simipics").removeAttr("src");
 		$(".simiNames").html('');
 		var responseData = data.response;
-
 		for (var i = 0; i<5; i++){
-			$(".simiNames").each(function(i){
-				$(this).text(responseData["artists"][i]["name"]); 
-			});
-		};
-
-		var similarid = responseData["artists"][0]["id"];
-		$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) { 
-			var responseData = data.response;
-			if(responseData.images[0]=== undefined){
-			    $(".simipics1").attr("src", "images/photo_not_available_big.jpg");
-			}else{
-				$(".simipics1").attr("src", responseData["images"][0]["url"]); 
-			};
-		}).fail(function(jqXHR, error, errorThrown){
-		var errorElem = showError(error);
-		$('.simipics1').append(errorElem);		
-		});
-
-		var similarid = responseData["artists"][1]["id"];
-		$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) { 
-			var responseData = data.response;
-			if(responseData.images[0]=== undefined){
-			    $(".simipics2").attr("src", "images/photo_not_available_big.jpg");
-			}else{
-				$(".simipics2").attr("src", responseData["images"][0]["url"]); 
-			};
-		}).fail(function(jqXHR, error, errorThrown){
-		var errorElem = showError(error);
-		$('.simipics2').append(errorElem);		
-		});
-		
-		var similarid = responseData["artists"][2]["id"];
-		$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) { 
-			var responseData = data.response;
-			if(responseData.images[0]=== undefined){
-			    $(".simipics3").attr("src", "images/photo_not_available_big.jpg");
-			}else{
-				$(".simipics3").attr("src", responseData["images"][0]["url"]); 
-			};
-		}).fail(function(jqXHR, error, errorThrown){
-		var errorElem = showError(error);
-		$('.simipics3').append(errorElem);		
-		});
-
-		var similarid = responseData["artists"][3]["id"];
-		$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) { 
-			var responseData = data.response;
-			if(responseData.images[0]=== undefined){
-			    $(".simipics4").attr("src", "images/photo_not_available_big.jpg");
-			}else{
-				$(".simipics4").attr("src", responseData["images"][0]["url"]); 
-			};
-		}).fail(function(jqXHR, error, errorThrown){
-		var errorElem = showError(error);
-		$('.simipics4').append(errorElem);		
-		});
-
-		var similarid = responseData["artists"][4]["id"];
-		$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) { 
-			var responseData = data.response;
-			if(responseData.images[0]=== undefined){
-			    $(".simipics5").attr("src", "images/photo_not_available_big.jpg");
-			}else{
-				$(".simipics5").attr("src", responseData["images"][0]["url"]); 
-			};
-		}).fail(function(jqXHR, error, errorThrown){
-		var errorElem = showError(error);
-		$('.simipics5').append(errorElem);		
-		});
-
+			var SimiNameSelection = ".simiNames" + (i+1);
+			$(SimiNameSelection).text(responseData["artists"][i]["name"]); 
+			console.log(responseData["artists"][i]["name"]);
+			function getPics(s) {
+				var similarid = responseData["artists"][s]["id"];
+				var picSelection = ".simipics" + (s+1);
+				$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) {
+					var responseData = data.response;
+					if(responseData.images[0]=== undefined){
+						$(picSelection).attr("src", "images/photo_not_available_big.jpg");
+					}else{
+						$(picSelection).attr("src", responseData["images"][0]["url"]); 
+					};
+				}).fail(function(jqXHR, error, errorThrown){
+					var errorElem = showError(error);
+					$(picSelection).append(errorElem);	
+				});
+			}
+			getPics(i);
+		}
 	}).fail(function(jqXHR, error, errorThrown){
 		var errorElem = showError(error);
 		$('.simiNames').append(errorElem);		
 	});
-
 };
-		
-		// for (var i = 0; i<5; i++){
-		// 	var similarid = responseData["artists"][i]["id"];
-		// 	function getResults(i, similarid) {
-		// 		$.getJSON(echonestApi+"images"+echonestkey+"id="+similarid+"&format=json&results=1&start=0&license=unknown").done(function(data) { 
-		// 			var responseData = data.response;
-
-		// 			console.log(responseData["images"][0]);		
-		// 			var j = 0;	
-		// 			$( ".simipics").each(function() {
-		// 				if(i==j){
-		// 					if(responseData.images[0]=== undefined){
-		// 					    $(".simipics").attr("src", "images/photo_not_available_big.jpg");
-		// 					}else{
-		// 					    $(".simipics").attr("src", responseData["images"][0]["url"]);
-		// 					};	
-		// 				}
-		// 				j++;		
-		// 			});	    	
-		// 		});
-		// 	};
-		// 	getResults(i, similarid);
-		// };

@@ -55,6 +55,9 @@ table {
 */
 
 
+
+
+
 .top{
 	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
 	font-size: 25px;
@@ -72,32 +75,32 @@ table {
 }
 
 
-#inputform{
-	border: 2px solid gray;
-	border-radius: 5px;
-	font:25px Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	overflow: hidden;
-	margin-left:auto;
-	margin-right:auto;
-	width: 50%;
-	margin-top:20px;
-	background-color:white;
-	color:#000047;
-}
-#submit{
-	font-family:Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	padding:5px;
-	background-color: gray;
-	border: 2px solid white;
-	color:white;
-	text-decoration:none;
-	font-size: 15px;
-	border-radius: 5px;
-}
+	#inputform{
+		border: 2px solid gray;
+		border-radius: 5px;
+		font:25px Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		overflow: hidden;
+		margin-left:auto;
+		margin-right:auto;
+		width: 50%;
+		margin-top:20px;
+		background-color:white;
+		color:#000047;
+	}
+	#submit{
+		font-family:Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		padding:5px;
+		background-color: gray;
+		border: 2px solid white;
+		color:white;
+		text-decoration:none;
+		font-size: 15px;
+		border-radius: 5px;
+	}
 
-#submit:hover { 
-    background-color:#000047;
-}
+	#submit:hover { 
+	    background-color:#000047;
+	}
 
 
 .firstrow{
@@ -109,44 +112,43 @@ table {
 }
 
 
-.pictures{
-	width: 242px;
-	height:242px;
-	background-color: gray;
-	position: relative;
-	margin-top: 10px;
-	display:inline-block;
-	overflow: hidden;
-	padding:10px;
-	margin-right: 10px;
-	border-radius: 10px;
+	.pictures{
+		width: 242px;
+		height:242px;
+		background-color: gray;
+		position: relative;
+		margin-top: 10px;
+		display:inline-block;
+		overflow: hidden;
+		padding:10px;
+		margin-right: 10px;
+		border-radius: 10px;
+	}
 
-}
-
-.pics {
-    top:0;
-	bottom:0;
-	margin:auto;
-/*    height: 100%;*/
-    max-height: 100%;
-    max-width:100%; 
-    background-color: gray;
-}
+		.pics {
+		    top:0;
+			bottom:0;
+			margin:auto;
+		/*    height: 100%;*/
+		    max-height: 100%;
+		    max-width:100%; 
+		    background-color: gray;
+		}
 
 
-.artist-name{
-	color:white;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	font-size: 50px;
-	margin-left: 50px;
-	padding: 50px;
-	max-width: 600px;
-	clear: both;
-	position: absolute;
-	margin-top:40px;
-	display:inline-block;
-	letter-spacing: -2px;
-}
+	.artist-name{
+		color:white;
+		font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		font-size: 50px;
+		margin-left: 50px;
+		padding: 50px;
+		max-width: 600px;
+		clear: both;
+		position: absolute;
+		margin-top:40px;
+		display:inline-block;
+		letter-spacing: -2px;
+	}
 
 
 .secondrow{
@@ -159,290 +161,300 @@ table {
 }
 
 
-.leftBottom{
-	width: 220px;
-	background-color:#393838;
-	color:white;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	padding: 15px;
-	height:auto;
-}
+	.leftBottom{
+		width: 220px;
+		background-color:#393838;
+		color:white;
+		font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		padding: 15px;
+		height:auto;
+	}
 
 
-.genre{
-	height:40px;
-	width:100%;
-	word-wrap: break-word;
-}
+		.genre{
+			height:40px;
+			width:100%;
+			word-wrap: break-word;
+		}
 
 
-.officialsite{
-	height:100%;
-	width:100%;
-	word-wrap: break-word;
-	font-size: 12px;
-}
+		.officialsite{
+			height:100%;
+			width:100%;
+			word-wrap: break-word;
+			font-size: 12px;
+		}
 
-.top5ongs{
-	margin-top: 20px;
-	margin-bottom: 10px;
-	height:695px;
-	width:100%;
-	overflow: auto;
-}
+			.officialsite a{
+				text-decoration: none;
+				color:white;
+			}
 
-.top5ongs p {
-	margin-bottom: 10px;
-}
+			.officialsite a:hover{
+				text-decoration: underline; 
+				color:gray;
+			}
 
-.audio-player div,
-.audio-player h1,
-.audio-player a,
-/*.audio-player img,*/
-.audio-player span,
-.audio-player button {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-}
+		.top5ongs{
+			margin-top: 20px;
+			margin-bottom: 10px;
+			height:695px;
+			width:100%;
+			overflow: auto;
+		}
 
-div.audio-player {
-	margin-bottom:33px;
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background: gray; 
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-div.jp-audio,
-div.jp-video {
-  /* Edit the font-size to counteract inherited font sizing.
-   * Eg. 1.25em = 1 / 0.8em
-   */
-  font-size:1.25em;
-}
+			.top5ongs p {
+				margin-bottom: 10px;
+			}
 
-.player{
-	margin-top: 70px;
-	width:100%;
+			.audio-player div,
+			.audio-player h1,
+			.audio-player a,
+			/*.audio-player img,*/
+			.audio-player span,
+			.audio-player button {
+			    margin: 0;
+			    padding: 0;
+			    border: none;
+			    outline: none;
+			}
 
-}
-.audio-player h1 {
-    position: absolute;
-    top: 10px;
-    left: 110px;
- 	text-align: left;
-    font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-    /*font-weight: bold;*/
-    font-size: 12px;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
-}
- 
-.audio-player .cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
+			div.audio-player {
+				margin-bottom:33px;
+			    position: relative;
+			    width: 100%;
+			    height: 100px;
+			    background: gray; 
+			    -webkit-border-radius: 3px;
+			    -moz-border-radius: 3px;
+			    border-radius: 3px;
+			}
+			div.jp-audio,
+			div.jp-video {
+			  /* Edit the font-size to counteract inherited font sizing.
+			   * Eg. 1.25em = 1 / 0.8em
+			   */
+			  font-size:1.25em;
+			}
 
-.cover{
-	height:100%;
-	max-width:100px;
-}
+			.player{
+				margin-top: 70px;
+				width:100%;
 
-.spotfylink{
-	margin-top:10px;
-	margin-bottom:10px;
-	margin-left:110px;
-	width: 100px;
-}
+			}
+				.audio-player h1 {
+				    position: absolute;
+				    top: 10px;
+				    left: 110px;
+				 	text-align: left;
+				    font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+				    /*font-weight: bold;*/
+				    font-size: 12px;
+				    color: white;
+				    text-shadow: 1px 1px 1px rgba(0,0,0, .5);
+				}
+				 
+				.audio-player .cover {
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				}
 
-.spotifylogo{
-	margin-left: 80px;
-	width: 130px;
-}
-.spotifylogo:hover{
-	border:white 2px solid;
-	border-radius: 16px
-}
+				.cover{
+					height:100%;
+					max-width:100px;
+				}
 
+			.spotfylink{
+				margin-top:10px;
+				margin-bottom:10px;
+				margin-left:110px;
+				width: 100px;
+			}
 
-.whosampled{
-	width: 100%;
-	margin-top: 14px;
-	text-align: center;
-	font-size: 15px;
-}
-.whosampled_logo{
-	width:120px;
-	margin-top:10px;
-	margin-left: 10px;
-}
+				.spotifylogo{
+					margin-left: 80px;
+					width: 130px;
+				}
+				.spotifylogo:hover{
+					border:white 2px solid;
+					border-radius: 16px
+				}
 
 
-.rightBottom{
-	margin-left: 250px;
-	margin-top: -868px;
-	padding-top: 15px;
-	padding-bottom: 0px;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	height: auto;
-	width:auto;
-	float:left;
-	background-color: white;
-}
+		.whosampled{
+			width: 100%;
+			margin-top: 14px;
+			text-align: center;
+			font-size: 15px;
+		}
+			.whosampled_logo{
+				width:120px;
+				margin-top:10px;
+				margin-left: 10px;
+			}
 
 
-.bio{
-	height: 300px;
-	overflow:auto;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.highlight { 
-	color:#000047;
-}
-
-
-
-.similarArtists{
-	height:auto;
-	width:auto;
-	margin-top:15px;
-	padding-top:15px;
-	text-align: center;
-	overflow: hidden;
-	width:100%;
-	max-width: 780px;
-	margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-	padding-right: 20px;
-}
-
-.similarArtistsul li{
-	display: inline-block;
-}
-
-.flex-viewport{
-	width:100%;
-}
-
-.simititle{
-	color:#000047;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	font-size: 25px;
-	text-align: center;
-	font-weight: bold;
-	margin-bottom:8px;
-}
-
-.simimemo{
-	color:#000047;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	font-size: 14px;
-	text-align: center;
-	margin-bottom:15px;
-}
-
-.simi{
-	width:100%;
-}
-
-.slides{
-	width: 100%;
-}
-
-.similarArtistspic{
-	width: 120px;
-	height:120px;
-	background-color: gray;
-	position: relative;
-	margin-top: 10px;
-	display:inline-block;
-	overflow: hidden;
-	padding:10px;
-	margin:auto;
-	border-radius: 10px;
-}
-
-.similarArtistspic:hover{
-	background-color: #000047;
-}
-
-.simiNames{
-	height:16px;
-	color:white;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	font-size: 12px;
-	text-align: center;
-	clear: both;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 110px; 
-    text-overflow: ellipsis;
-}
-
-.simipics {
-	top:0;
-	bottom:0;
-	margin:auto;
-    max-height: 100%;
-    max-width:100%; 
-}
+	.rightBottom{
+		margin-left: 250px;
+		margin-top: -938px;
+		padding-top: 15px;
+		padding-bottom: 0px;
+		font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+		height: auto;
+		width:auto;
+		float:left;
+		background-color: white;
+	}
 
 
-.newsContainer{
-	height:auto;
-	margin:25px;
-	border-color: gray;
-	border-radius: 10px;
-	border-width: 5px;
-	border-style: solid;
-	padding:10px;
-	overflow:auto;
-	word-wrap: break-word;
+		.bio{
+			height: 300px;
+			overflow:auto;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
 
-}
-.news{
-	margin-top: 10px;
-	font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-	font-size: 12px;
-}
+		.highlight { 
+			color:#000047;
+		}
 
-.title{
-	font-size: 14px;
-	font-weight: bold;
-	color:#000047;
-}
 
-span{
-	font-weight: bold;
-	color:#000047;
-}
 
-.url{
-	margin-top: 10px;
-}
+		.similarArtists{
+			height:auto;
+			width:auto;
+			margin-top:15px;
+			padding-top:15px;
+			text-align: center;
+			overflow: hidden;
+			width:100%;
+			max-width: 780px;
+			margin-left: auto;
+		    margin-right: auto;
+		    padding-left: 20px;
+			padding-right: 20px;
+		}
+
+			.similarArtistsul li{
+				display: inline-block;
+			}
+
+			.flex-viewport{
+				width:100%;
+			}
+
+			.simititle{
+				color:#000047;
+				font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+				font-size: 25px;
+				text-align: center;
+				font-weight: bold;
+				margin-bottom:8px;
+			}
+
+			.simimemo{
+				color:#000047;
+				font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+				font-size: 14px;
+				text-align: center;
+				margin-bottom:15px;
+			}
+
+			.simi{
+				width:100%;
+			}
+
+			.slides{
+				width: 100%;
+			}
+
+			.similarArtistspic{
+				width: 120px;
+				height:120px;
+				background-color: gray;
+				position: relative;
+				margin-top: 10px;
+				display:inline-block;
+				overflow: hidden;
+				padding:10px;
+				margin:auto;
+				border-radius: 10px;
+			}
+
+			.similarArtistspic:hover{
+				background-color: #000047;
+			}
+
+			.simiNames{
+				height:16px;
+				color:white;
+				font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+				font-size: 12px;
+				text-align: center;
+				clear: both;
+			    display: inline-block;
+			    overflow: hidden;
+			    white-space: nowrap;
+			    max-width: 110px; 
+			    text-overflow: ellipsis;
+			}
+
+			.simipics {
+				top:0;
+				bottom:0;
+				margin:auto;
+			    max-height: 100%;
+			    max-width:100%; 
+			}
+
+
+	.newsContainer{
+		height:auto;
+		max-height: 250px;
+		margin:25px;
+		border-color: gray;
+		border-radius: 10px;
+		border-width: 5px;
+		border-style: solid;
+		padding:10px;
+		overflow:auto;
+		word-wrap: break-word;
+
+	}
+		.news{
+			margin-top: 10px;
+			font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+			font-size: 12px;
+		}
+
+		.title{
+			font-size: 14px;
+			font-weight: bold;
+			color:#000047;
+		}
+
+		span{
+			font-weight: bold;
+			color:#000047;
+		}
+
+		.url{
+			margin-top: 10px;
+		}
 
 
 footer{
 	height:50px;
 	bottom:0%;
 	width:100%;
-	
 	background-color: gray;
 }
 
-.logo{
-	margin-top: 10px;
-	float:right;
-}
+	.logo{
+		margin-top: 10px;
+		float:right;
+	}
 
 
 
@@ -454,9 +466,10 @@ footer{
 	background-color: white;
 }
 
-#alert{
-	height:80%;
-}
+	#alert{
+		height:80%;
+	}
+
 
 .hidden{
 	display:none;
